@@ -15,6 +15,7 @@
 		EE849DE82C42736D00C2D253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE849DE72C42736D00C2D253 /* Assets.xcassets */; };
 		EE849DEB2C42736D00C2D253 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EE849DEA2C42736D00C2D253 /* Base */; };
 		EE849DF92C42778B00C2D253 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849DF82C42778B00C2D253 /* BannerAdView.swift */; };
+		EE849DFB2C42863A00C2D253 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849DFA2C42863A00C2D253 /* InterstitialAdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EE849DEA2C42736D00C2D253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE849DEC2C42736D00C2D253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE849DF82C42778B00C2D253 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		EE849DFA2C42863A00C2D253 /* InterstitialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				EE849DF82C42778B00C2D253 /* BannerAdView.swift */,
+				EE849DFA2C42863A00C2D253 /* InterstitialAdView.swift */,
 			);
 			path = Ads;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			files = (
 				EE849DE32C42736C00C2D253 /* ViewController.swift in Sources */,
 				EE849DDF2C42736C00C2D253 /* AppDelegate.swift in Sources */,
+				EE849DFB2C42863A00C2D253 /* InterstitialAdView.swift in Sources */,
 				EE849DE12C42736C00C2D253 /* SceneDelegate.swift in Sources */,
 				EE849DF92C42778B00C2D253 /* BannerAdView.swift in Sources */,
 			);

@@ -8,14 +8,18 @@
 import UIKit
 import GoogleMobileAds
 
-class ViewController: UIViewController, GADBannerViewDelegate {
+class ViewController: UIViewController {
     var bannerAdView: BannerAdView!
+    var interstitialAdView: InterstitialAdView?
+    
+    @IBOutlet weak var interstitialButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         setupBannerAdView()
+        setupInterstitialAdView()
     }
     
     private func setupBannerAdView() {
@@ -42,6 +46,15 @@ class ViewController: UIViewController, GADBannerViewDelegate {
             ])
         
         bannerAdView.loadAd(withAdUnitID: "ca-app-pub-8638863047626544/5236511938")
+    }
+    
+    private func setupInterstitialAdView() {
+        interstitialAdView = InterstitialAdView()
+        interstitialAdView?.loadInterstitial()
+    }
+    
+    @IBAction func interstitialButtonTapped(_ sender: UIButton) {
+        interstitialAdView?.presentInterstitialAd(from: self)
     }
 }
 
