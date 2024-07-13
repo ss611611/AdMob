@@ -14,6 +14,7 @@
 		EE849DE62C42736C00C2D253 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EE849DE52C42736C00C2D253 /* Base */; };
 		EE849DE82C42736D00C2D253 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE849DE72C42736D00C2D253 /* Assets.xcassets */; };
 		EE849DEB2C42736D00C2D253 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EE849DEA2C42736D00C2D253 /* Base */; };
+		EE849DF92C42778B00C2D253 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849DF82C42778B00C2D253 /* BannerAdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EE849DE72C42736D00C2D253 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE849DEA2C42736D00C2D253 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE849DEC2C42736D00C2D253 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE849DF82C42778B00C2D253 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		EE849DDD2C42736C00C2D253 /* AdMob */ = {
 			isa = PBXGroup;
 			children = (
+				EE849DF72C42777500C2D253 /* Ads */,
 				EE849DDE2C42736C00C2D253 /* AppDelegate.swift */,
 				EE849DE02C42736C00C2D253 /* SceneDelegate.swift */,
 				EE849DE22C42736C00C2D253 /* ViewController.swift */,
@@ -89,6 +92,14 @@
 				EE849DEC2C42736D00C2D253 /* Info.plist */,
 			);
 			path = AdMob;
+			sourceTree = "<group>";
+		};
+		EE849DF72C42777500C2D253 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				EE849DF82C42778B00C2D253 /* BannerAdView.swift */,
+			);
+			path = Ads;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				EE849DE32C42736C00C2D253 /* ViewController.swift in Sources */,
 				EE849DDF2C42736C00C2D253 /* AppDelegate.swift in Sources */,
 				EE849DE12C42736C00C2D253 /* SceneDelegate.swift in Sources */,
+				EE849DF92C42778B00C2D253 /* BannerAdView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53JP7T2TYF;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AdMob/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -391,6 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 53JP7T2TYF;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AdMob/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
