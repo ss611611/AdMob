@@ -11,6 +11,7 @@ import UIKit
 class RewardedInterstitialAdView: UIViewController {
 
     private var rewardedInterstitial: GADRewardedInterstitialAd?
+    var onRewardEarned: ((GADAdReward) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class RewardedInterstitialAdView: UIViewController {
                 // Handle user earning reward.
                 let reward = rewardedInterstitial.adReward
                 print("User earned reward of \(reward.amount) \(reward.type).")
+                self.onRewardEarned?(reward)
             }
         } else {
             print("Rewarded interstitial ad wasn't ready.")

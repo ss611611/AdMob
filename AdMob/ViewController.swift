@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var RewardedInterstitialButton: UIButton!
     
+    @IBOutlet weak var rewardLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -57,9 +59,21 @@ class ViewController: UIViewController {
         interstitialAdView?.loadInterstitial()
     }
     
+    private func handleRewardEarned(_ reward: GADAdReward) {
+        DispatchQueue.main.async { [weak self] in
+            self?.showRewardLabel(with: reward)
+        }
+    }
+    private func showRewardLabel(with reward: GADAdReward) {
+        rewardLabel.text = "reward: \(reward.amount) \(reward.type)"
+    }
+    
     private func setupRewardedInterstitialAdView() {
         rewardedInterstitialAdView = RewardedInterstitialAdView()
         rewardedInterstitialAdView?.loadRewardedInterstitialAd()
+        rewardedInterstitialAdView?.onRewardEarned = { [weak self] reward in
+            self?.handleRewardEarned(reward)
+        }
     }
     
     @IBAction func interstitialButtonTapped(_ sender: UIButton) {
@@ -68,6 +82,10 @@ class ViewController: UIViewController {
     
     @IBAction func rewardedInterstitialButtonTapped(_ sender: UIButton) {
         rewardedInterstitialAdView?.presentRewardedInterstitialAd(from: self)
+    }
+    
+    func updateRewardLabel(with reward: GADAdReward) {
+        rewardLabel.text = "Earned \(reward.amount) \(reward.type)"
     }
 }
 

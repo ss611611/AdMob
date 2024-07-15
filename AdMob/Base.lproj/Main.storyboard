@@ -48,6 +48,16 @@
                                     <action selector="rewardedInterstitialButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xOm-0a-Y98"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="rewardLabel" text="reward: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDJ-o8-j94">
+                                <rect key="frame" x="233" y="69" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="50t-3n-YlX"/>
+                                    <constraint firstAttribute="width" constant="150" id="aq3-vD-NGw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -55,6 +65,8 @@
                             <constraint firstItem="y49-qU-980" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fdu-u1-N8o"/>
                             <constraint firstItem="bJF-GY-fKj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oj6-TG-NZX"/>
                             <constraint firstItem="H8l-vi-Mxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="UBG-Re-zAu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mDJ-o8-j94" secondAttribute="trailing" constant="10" id="ebn-xP-8LR"/>
+                            <constraint firstItem="mDJ-o8-j94" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="kOn-Ic-cYK"/>
                             <constraint firstItem="H8l-vi-Mxt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="opY-zg-Oqb"/>
                             <constraint firstItem="y49-qU-980" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vhp-Iy-JO4"/>
                         </constraints>
@@ -62,6 +74,7 @@
                     <connections>
                         <outlet property="InterstitialButton" destination="y49-qU-980" id="H1w-i1-gj0"/>
                         <outlet property="RewardedInterstitialButton" destination="H8l-vi-Mxt" id="4ml-zY-SBS"/>
+                        <outlet property="rewardLabel" destination="mDJ-o8-j94" id="4b8-eH-zNB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

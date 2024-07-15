@@ -17,6 +17,7 @@
 		EE849DF92C42778B00C2D253 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849DF82C42778B00C2D253 /* BannerAdView.swift */; };
 		EE849DFB2C42863A00C2D253 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849DFA2C42863A00C2D253 /* InterstitialAdView.swift */; };
 		EE849DFD2C4299E600C2D253 /* RewardedInterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849DFC2C4299E600C2D253 /* RewardedInterstitialAdView.swift */; };
+		EEB93B1E2C44BBAA006E0F17 /* RewardedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB93B1D2C44BBAA006E0F17 /* RewardedAdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EE849DF82C42778B00C2D253 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		EE849DFA2C42863A00C2D253 /* InterstitialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
 		EE849DFC2C4299E600C2D253 /* RewardedInterstitialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedInterstitialAdView.swift; sourceTree = "<group>"; };
+		EEB93B1D2C44BBAA006E0F17 /* RewardedAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				EE849DF82C42778B00C2D253 /* BannerAdView.swift */,
 				EE849DFA2C42863A00C2D253 /* InterstitialAdView.swift */,
 				EE849DFC2C4299E600C2D253 /* RewardedInterstitialAdView.swift */,
+				EEB93B1D2C44BBAA006E0F17 /* RewardedAdView.swift */,
 			);
 			path = Ads;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				EE849DDF2C42736C00C2D253 /* AppDelegate.swift in Sources */,
 				EE849DFB2C42863A00C2D253 /* InterstitialAdView.swift in Sources */,
 				EE849DE12C42736C00C2D253 /* SceneDelegate.swift in Sources */,
+				EEB93B1E2C44BBAA006E0F17 /* RewardedAdView.swift in Sources */,
 				EE849DFD2C4299E600C2D253 /* RewardedInterstitialAdView.swift in Sources */,
 				EE849DF92C42778B00C2D253 /* BannerAdView.swift in Sources */,
 			);
