@@ -11,8 +11,11 @@ import GoogleMobileAds
 class ViewController: UIViewController {
     var bannerAdView: BannerAdView!
     var interstitialAdView: InterstitialAdView?
+    var rewardedInterstitialAdView: RewardedInterstitialAdView?
     
     @IBOutlet weak var interstitialButton: UIButton!
+    
+    @IBOutlet weak var RewardedInterstitialButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,7 @@ class ViewController: UIViewController {
         
         setupBannerAdView()
         setupInterstitialAdView()
+        setupRewardedInterstitialAdView()
     }
     
     private func setupBannerAdView() {
@@ -53,8 +57,17 @@ class ViewController: UIViewController {
         interstitialAdView?.loadInterstitial()
     }
     
+    private func setupRewardedInterstitialAdView() {
+        rewardedInterstitialAdView = RewardedInterstitialAdView()
+        rewardedInterstitialAdView?.loadRewardedInterstitialAd()
+    }
+    
     @IBAction func interstitialButtonTapped(_ sender: UIButton) {
         interstitialAdView?.presentInterstitialAd(from: self)
+    }
+    
+    @IBAction func rewardedInterstitialButtonTapped(_ sender: UIButton) {
+        rewardedInterstitialAdView?.presentRewardedInterstitialAd(from: self)
     }
 }
 

@@ -36,17 +36,32 @@
                                     <action selector="interstitialButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uld-sh-xfe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8l-vi-Mxt">
+                                <rect key="frame" x="96.666666666666686" y="209" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GE8-od-Ap2"/>
+                                    <constraint firstAttribute="width" constant="200" id="hxn-Tv-mqK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="RewardedInterstitialAd"/>
+                                <connections>
+                                    <action selector="rewardedInterstitialButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xOm-0a-Y98"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="y49-qU-980" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fdu-u1-N8o"/>
                             <constraint firstItem="bJF-GY-fKj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oj6-TG-NZX"/>
+                            <constraint firstItem="H8l-vi-Mxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="UBG-Re-zAu"/>
+                            <constraint firstItem="H8l-vi-Mxt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="opY-zg-Oqb"/>
                             <constraint firstItem="y49-qU-980" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vhp-Iy-JO4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="InterstitialButton" destination="y49-qU-980" id="H1w-i1-gj0"/>
+                        <outlet property="RewardedInterstitialButton" destination="H8l-vi-Mxt" id="4ml-zY-SBS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
