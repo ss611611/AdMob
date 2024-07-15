@@ -16,14 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJF-GY-fKj" customClass="BannerAdView" customModule="AdMob" customModuleProvider="target">
-                                <rect key="frame" x="81.666666666666686" y="682" width="230" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="22L-ir-kp0"/>
-                                    <constraint firstAttribute="height" constant="20" id="hOM-q1-mnl"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y49-qU-980">
                                 <rect key="frame" x="121.66666666666669" y="408.66666666666669" width="150" height="35"/>
                                 <constraints>
@@ -75,7 +67,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="y49-qU-980" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fdu-u1-N8o"/>
-                            <constraint firstItem="bJF-GY-fKj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oj6-TG-NZX"/>
                             <constraint firstItem="H8l-vi-Mxt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="UBG-Re-zAu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mDJ-o8-j94" secondAttribute="trailing" constant="10" id="ebn-xP-8LR"/>
                             <constraint firstItem="mDJ-o8-j94" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="kOn-Ic-cYK"/>
