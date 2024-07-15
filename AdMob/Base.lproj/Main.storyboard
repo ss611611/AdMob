@@ -58,6 +58,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2f-Er-1gc">
+                                <rect key="frame" x="131.66666666666666" y="299" width="129.99999999999997" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="mWb-Ob-P32"/>
+                                    <constraint firstAttribute="width" constant="130" id="y5q-aG-qII"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="RewardedAd"/>
+                                <connections>
+                                    <action selector="rewardedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mWf-CU-0ur"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,11 +80,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mDJ-o8-j94" secondAttribute="trailing" constant="10" id="ebn-xP-8LR"/>
                             <constraint firstItem="mDJ-o8-j94" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="kOn-Ic-cYK"/>
                             <constraint firstItem="H8l-vi-Mxt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="opY-zg-Oqb"/>
+                            <constraint firstItem="x2f-Er-1gc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qnR-qu-ggH"/>
+                            <constraint firstItem="x2f-Er-1gc" firstAttribute="top" secondItem="H8l-vi-Mxt" secondAttribute="bottom" constant="50" id="rjj-hp-bhq"/>
                             <constraint firstItem="y49-qU-980" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vhp-Iy-JO4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="InterstitialButton" destination="y49-qU-980" id="H1w-i1-gj0"/>
+                        <outlet property="RewardedButton" destination="x2f-Er-1gc" id="Bze-5S-xrc"/>
                         <outlet property="RewardedInterstitialButton" destination="H8l-vi-Mxt" id="4ml-zY-SBS"/>
                         <outlet property="rewardLabel" destination="mDJ-o8-j94" id="4b8-eH-zNB"/>
                     </connections>

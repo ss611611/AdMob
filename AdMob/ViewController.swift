@@ -12,11 +12,14 @@ class ViewController: UIViewController {
     var bannerAdView: BannerAdView!
     var interstitialAdView: InterstitialAdView?
     var rewardedInterstitialAdView: RewardedInterstitialAdView?
+    var rewardedAdView: RewardedAdView!
+    var totalRewardAmount: Int = 0
+    var totalRewardType: String = ""
+
     
     @IBOutlet weak var interstitialButton: UIButton!
-    
     @IBOutlet weak var RewardedInterstitialButton: UIButton!
-    
+    @IBOutlet weak var RewardedButton: UIButton!
     @IBOutlet weak var rewardLabel: UILabel!
     
     override func viewDidLoad() {
@@ -26,6 +29,7 @@ class ViewController: UIViewController {
         setupBannerAdView()
         setupInterstitialAdView()
         setupRewardedInterstitialAdView()
+        setupRewardedAdView()
     }
     
     private func setupBannerAdView() {
@@ -61,17 +65,30 @@ class ViewController: UIViewController {
     
     private func handleRewardEarned(_ reward: GADAdReward) {
         DispatchQueue.main.async { [weak self] in
-            self?.showRewardLabel(with: reward)
+            if let self = self {
+                self.totalRewardAmount += reward.amount.intValue
+                self.totalRewardType += "\(reward.type), "
+                self.showRewardLabel()
+            }
         }
     }
-    private func showRewardLabel(with reward: GADAdReward) {
-        rewardLabel.text = "reward: \(reward.amount) \(reward.type)"
+    
+    private func showRewardLabel() {
+        rewardLabel.text = "reward: \(totalRewardAmount) \(totalRewardType)"
     }
     
     private func setupRewardedInterstitialAdView() {
         rewardedInterstitialAdView = RewardedInterstitialAdView()
         rewardedInterstitialAdView?.loadRewardedInterstitialAd()
         rewardedInterstitialAdView?.onRewardEarned = { [weak self] reward in
+            self?.handleRewardEarned(reward)
+        }
+    }
+    
+    private func setupRewardedAdView() {
+        rewardedAdView = RewardedAdView()
+        rewardedAdView?.loadRewardedAd()
+        rewardedAdView?.onRewardEarned = { [weak self] reward in
             self?.handleRewardEarned(reward)
         }
     }
@@ -84,8 +101,8 @@ class ViewController: UIViewController {
         rewardedInterstitialAdView?.presentRewardedInterstitialAd(from: self)
     }
     
-    func updateRewardLabel(with reward: GADAdReward) {
-        rewardLabel.text = "Earned \(reward.amount) \(reward.type)"
+    @IBAction func rewardedButtonTapped(_ sender: UIButton) {
+        rewardedAdView?.presentRewardedAd(from: self)
     }
 }
 
